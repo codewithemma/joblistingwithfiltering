@@ -1,6 +1,7 @@
-import data from "../../data";
+// import data from "../../data.json";
+import { JOB_LISTINGS } from "../../DATA.jsx";
 export function getData() {
-  const DataList = data;
+  const DataList = JOB_LISTINGS;
   return DataList;
 }
 

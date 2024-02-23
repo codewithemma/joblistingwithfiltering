@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-// import img1 from "../../images/photosnap.svg";
 import { buttons } from "../Data/buttonData";
 import { getData, filterData } from "../Services/Services";
 const Cards = () => {
   const [filteredData, setFilteredData] = useState(null);
-  console.log(filteredData);
   const handleData = (event) => {
     let typeData = event.target.value;
     typeData !== "all"
