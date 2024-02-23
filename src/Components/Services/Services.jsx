@@ -1,4 +1,4 @@
-import data from "../Data/data.json";
+import data from "../../data";
 export function getData() {
   const DataList = data;
   return DataList;

@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import "../../input.css";
-import img1 from "../../images/photosnap.svg";
+// import img1 from "../../images/photosnap.svg";
 import { buttons } from "../Data/buttonData";
 import { getData, filterData } from "../Services/Services";
 const Cards = () => {
   const [filteredData, setFilteredData] = useState(null);
-
+  console.log(filteredData);
   const handleData = (event) => {
     let typeData = event.target.value;
     typeData !== "all"
@@ -22,8 +21,9 @@ const Cards = () => {
       <div className="w-3/4 relative -top-14 bg-white shadow-xl h-[30%] mx-auto flex items-center my-5 px-3 py-5">
         {buttons &&
           buttons.map((item) => (
-            <div key={item.id}>
+            <div>
               <button
+                key={item.id}
                 className="bg-slate-200 text-primary font-bold mx-3 p-1 rounded-md hover:bg-[#5ba4a4] hover:text-white"
                 value={item.value}
                 onClick={handleData}
@@ -42,7 +42,7 @@ const Cards = () => {
           >
             <div className="max-sm:flex-col flex md:items-center mx-3">
               <img
-                src={img1}
+                src={item.logo}
                 alt="Companies Logo"
                 className="w-20 mr-2 max-sm:w-16 relative max-sm:-top-5"
               />
